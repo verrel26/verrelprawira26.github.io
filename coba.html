@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/sweetalert/dist/sweetalert2.all.min.css">
+    <style>
+        body {
+  margin: 20px auto;
+  font-family: 'Lato';
+  font-weight: 300;
+  width: 600px;
+  text-align: center;
+}
+
+button {
+  background: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Lato';
+  margin: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background: orange;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button class="first">Title Only</button>
+    <button class="second">Title and Text</button>
+    <button class="third">Title, Text and Icon</button>
+<script>
+    document.querySelector(".first").addEventListener('click', function(){
+  Swal.fire("Our First Alert");
+});
+
+document.querySelector(".second").addEventListener('click', function(){
+  Swal.fire("Our First Alert", "With some body text!");
+});
+
+document.querySelector(".third").addEventListener('click', function(){
+  Swal.fire("Our First Alert", "With some body text and success icon!", "success");
+});
+</script>
+
+
+<script src="assets/sweetalert/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
